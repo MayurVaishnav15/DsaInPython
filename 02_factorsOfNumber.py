@@ -15,15 +15,15 @@ class Solution:
         sum = 1
         result = []
         if num==1:
-            return False
+            return result
         for i in range(2,int(num**.5)+1):
             if(num%i==0):
-                # sum+=i+(num//i)
+                sum+=i+(num//i)
                 result.append(i)
                 if i !=(num//i):
                     result.append((num//i))
         print(result)
-        # return True if sum==num else False
+        return True if sum==num else False
             
 obj=Solution()
-print(obj.checkPerfectNumber(36))   
+print(obj.checkPerfectNumber(1))   
