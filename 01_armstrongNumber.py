@@ -15,24 +15,45 @@
 # print(Solution.isArmstrong(n))
 
 
-class Solution:
+# class Solution:
     
-    def isArmstrong(self,n : int ) -> bool:
+#     def isArmstrong(self,n : int ) -> bool:
         
-        nod= len(str(n))
-        total=0
-        chk=n
-        while(chk>0): #123
-            last = chk%10
-            total= total + last**nod
-            chk//=10
-        return True if total == n else False
+#         nod= len(str(n))
+#         total=0
+#         chk=n
+#         while(chk>0): #123
+#             last = chk%10
+#             total= total + last**nod
+#             chk//=10
+#         return True if total == n else False
 
-if __name__ == "__main__":
-    obj = Solution()
-    try:
-        user_input = int(input("Enter a number : "))
-        print(obj.isArmstrong(user_input))
+# if __name__ == "__main__":
+#     obj = Solution()
+#     try:
+#         user_input = int(input("Enter a number : "))
+#         print(obj.isArmstrong(user_input))
     
-    except ValueError:
-        print("Enter Valid Input")
+#     except ValueError:
+#         print("Enter Valid Input")
+
+
+
+
+class arm:
+    def func(self,input:int):
+        p = len(str(input))
+        chk = input
+        total = 0
+        for i in range(0,p):
+            last = input%10
+            total += last**p
+            input//=10
+        print(total)
+        if total == chk:
+            print("Armstrong Number")
+        else:
+            print("Not")
+
+obj = arm()
+obj.func(1634)
