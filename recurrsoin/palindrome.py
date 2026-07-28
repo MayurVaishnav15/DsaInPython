@@ -13,12 +13,27 @@
 
 
 # This is a recursie approach O(N) & O(1)
-def recPalindromFunc(nums,left=0,right=None):
-    if right is None:
-        right = len(nums) - 1
-    if(left>=right):
-        return True
-    if(nums[left]!=nums[right]):
-        return False
-    return recPalindromFunc(nums,left+1,right-1)
-print(recPalindromFunc('1234321'))
+# def recPalindromFunc(nums,left=0,right=None):
+#     if right is None:
+#         right = len(nums) - 1
+#     if(left>=right):
+#         return True
+#     if(nums[left]!=nums[right]):
+#         return False
+#     return recPalindromFunc(nums,left+1,right-1)
+# print(recPalindromFunc('1234321'))
+
+
+
+
+# def func(left,right,input):
+#     if input[left] != input[right]:
+#         return False
+#     if left==right:
+#         return True
+#     return(func(left+1,right-1,input))
+
+# input = input("Enter your String: ")
+# left=0
+# right = len(input)-1
+# print(func(left,right,input))
