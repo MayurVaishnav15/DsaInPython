@@ -22,3 +22,33 @@
 #     return fib(n-1) + fib(n-2)
     
 # fib(9)
+
+
+
+
+
+
+
+
+
+class fibo:
+    def fibonacci(self,input):
+        # 0 1 1 2 3 5 8 13 21
+        # a b c 
+        a = 0
+        b = 1
+        print(a,b,end=' ')
+        for i in range(0,input-2):
+            c = a + b
+            print(c,end=' ')
+            a = b
+            b = c
+
+obj=fibo()
+obj.fibonacci(16)
+
+
+
+
+
+
